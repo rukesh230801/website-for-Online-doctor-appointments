@@ -1,0 +1,233 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Ubuntu:wght@300&display=swap");
+body {
+  margin: 0px;
+  padding: 0;
+  font-family: 16px/1.6 "Ubuntu", sans-serif;
+  background-color: deepskyblue;
+  color: solid deepskyblue;
+}
+.wrapper {
+  width: 85%;
+  margin: auto;
+  overflow: hidden;
+}
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+}
+select {
+  border: none;
+}
+img {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+header {
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+  padding: 10px 0;
+  min-height: 50px;
+  border-bottom: 3px solid #333;
+  margin-bottom: 50px;
+}
+header h2 .label {
+  font: 30px "Black Ops One", cursive;
+  color: deepskyblue;
+}
+header h2 {
+  font-family: "Black Ops One", cursive;
+  font-weight: normal;
+  display: inline;
+  padding-left: 5px;
+}
+
+header #home,
+header #name {
+  float: left;
+  margin-top: 5px;
+}
+.bigbox {
+  position: relative;
+  margin: 5% auto;
+  top: 5%;
+  height: 600px;
+  width: 760px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.login {
+  background-color: white;
+  width: 380px;
+  height: 600px;
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  color: black;
+  border: 2px solid deepskyblue;
+  padding: 30px;
+}
+.login h1 {
+  float: left;
+  font-size: 30px;
+  border-bottom: 6px solid deepskyblue;
+  margin-bottom: 30px;
+  padding: 13px 0;
+  position: relative;
+  bottom: 40px;
+}
+.type {
+  position: relative;
+  top: 80px;
+  right: 60px;
+}
+.type .doct {
+  position: relative;
+  right: 50px;
+}
+.type .pati {
+  position: relative;
+  left: 120px;
+  bottom: 18px;
+}
+
+.username {
+  width: 100%;
+  overflow: hidden;
+  padding: 1px 0;
+  margin: 5px 0;
+  border-bottom: 1px solid deepskyblue;
+}
+.username input {
+  background: none;
+  border: none;
+  outline: none;
+  color: solid black;
+  font-size: 18px;
+  width: 200px;
+  float: left;
+  margin: 10px 0;
+  font-family: 16px/1.6 "Ubuntu", sans-serif;
+}
+.btn {
+  width: 100%;
+  font-weight: 500;
+  background: none;
+  border: 2px solid deepskyblue;
+  color: solid black;
+  padding: 12px;
+  border-radius: 30px;
+}
+.btn1 {
+  width: 100%;
+  font-weight: 500;
+  background: none;
+  border: 2px solid deepskyblue;
+  color: solid black;
+  padding: 12px;
+  border-radius: 30px;
+}
+.btn:hover,
+.btn1:hover {
+  color: whitesmoke;
+  background-color: deepskyblue;
+  cursor: pointer;
+}
+.errorbox {
+  position: absolute;
+  top: 0;
+  right: 40%;
+  width: 60%;
+}
+.errorbox1 {
+  position: absolute;
+  top: 0;
+  right: 43%;
+  width: 60%;
+}
+
+.rightbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 40px;
+  width: 380px;
+  height: 600px;
+  background-image: url(../img/giphy1.gif);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid deepskyblue;
+  box-sizing: border-box;
+}
+.rightbox .already {
+  display: block;
+  margin-bottom: 400px;
+  font-size: 28px;
+  color: black;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+.rightbox .btnn {
+  width: 100%;
+  font-weight: 500;
+  background: none;
+  border: 2px solid deepskyblue;
+  color: whitesmoke;
+  padding: 12px;
+  border-radius: 30px;
+}
+.rightbox .btnn:hover {
+  color: deepskyblue;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.or {
+  position: absolute;
+  top: 300px;
+  left: 360px;
+  width: 40px;
+  height: 40px;
+  background: #efefef;
+  border-radius: 60%;
+  line-height: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.sub {
+  text-decoration: none;
+  color: black;
+}
+.error {
+  width: 92%;
+  margin: 0px auto;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #a94442;
+  color: black;
+  background: whitesmoke;
+  border-radius: 5px;
+  text-align: left;
+}
+.error .alert {
+  text-align: center;
+  color: red;
+  font-size: 20px;
+}

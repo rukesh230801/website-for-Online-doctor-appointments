@@ -1,0 +1,726 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Ubuntu:wght@300&display=swap");
+
+/* Global Values */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: deepskyblue;
+  font: 16px/1.6 "Ubuntu", sans-serif;
+}
+.wrapper {
+  width: 85%;
+  margin: auto;
+  overflow: hidden;
+}
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+}
+select {
+  border: none;
+}
+img {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+header {
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+  padding: 10px 0;
+  min-height: 50px;
+  border-bottom: 3px solid #333;
+  margin-bottom: 50px;
+}
+header h2 .label {
+  font: 30px "Black Ops One", cursive;
+  color: deepskyblue;
+}
+header h2 {
+  font-family: "Black Ops One", cursive;
+  font-weight: normal;
+  display: inline;
+  padding-left: 5px;
+}
+
+header #home,
+header #name {
+  float: left;
+  margin-top: 5px;
+}
+/* Navigation Bar options */
+
+/* Search-Box */
+
+header .search-box {
+  padding: 4px 8px;
+  border: none;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  border: 1.5px solid whitesmoke;
+  border-radius: 5px;
+  outline: deepskyblue;
+  width: 40vw;
+  height: 4vh;
+}
+header .search-box:focus {
+  border-color: deepskyblue;
+}
+header .search-icon {
+  margin: 0;
+  height: 4vh;
+  color: deepskyblue;
+  padding: 3px 6px;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  outline: none;
+}
+header .search-icon:hover {
+  background-color: black;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+}
+
+/* City Drop-down List */
+
+header select {
+  color: black;
+  background-color: whitesmoke;
+  font: 16px Ubuntu;
+  font-weight: bolder;
+  padding: 5px;
+  outline: none;
+  cursor: pointer;
+}
+header select option {
+  outline: none;
+  background-color: #333333;
+  color: deepskyblue;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+/* header select option:hover {
+  background-color: whitesmoke;
+  transition: all 0.2s ease-in-out; */
+header select:hover {
+  color: deepskyblue;
+  transition: color 0.2s ease-in-out;
+}
+
+/* About, Sign up and Login */
+
+header ul {
+  margin: 0;
+  padding: 0;
+}
+header li {
+  float: left;
+  display: inline;
+  padding: 0 10px;
+  margin: 0 5px;
+}
+header #title {
+  float: left;
+}
+header nav {
+  float: right;
+  padding-top: 9px;
+}
+header nav a:hover {
+  color: deepskyblue;
+  font-weight: 900;
+  margin: 0;
+  padding: 25px 0;
+  transition: color 0.2s ease-in-out;
+}
+/* THE Intro Slider*/
+
+#intro {
+  position: relative;
+  margin-bottom: 50px;
+}
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+  width: 85%;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.26), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.slide.current {
+  opacity: 1;
+}
+.slide .content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.1em;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+}
+.slide.current .content {
+  opacity: 1;
+  transition: opacity 1s ease-in-out 0.4s;
+}
+
+/* Slider Buttons */
+
+.icons button.prev {
+  position: absolute;
+  top: 45%;
+  left: 17vh;
+}
+.icons button.next {
+  position: absolute;
+  top: 45%;
+  right: 17vh;
+}
+.icons button {
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 13px 15px;
+  color: deepskyblue;
+  border-radius: 10%;
+  outline: none;
+}
+.icons button:hover {
+  background-color: black;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+}
+
+/* Background images for Intro Slider */
+
+.slide:first-child {
+  background: url(../img/intro.jpg) no-repeat center center/cover;
+  background-color: #333;
+}
+.slide:nth-child(2) {
+  background: url(../img/time.jpg) no-repeat center left/cover;
+  background-color: #333;
+}
+.slide:nth-child(3) {
+  background: url(../img/hospital.jpg) no-repeat center center/cover;
+  background-color: #333;
+}
+.slide:nth-child(4) {
+  background: url(../img/article.jpg) no-repeat center bottom/cover;
+  background-color: #333;
+}
+
+/* The Book Button */
+
+/* .fixed {
+  position: fixed;
+} */
+.fixed button {
+  position: fixed;
+  top: 50%;
+  right: 5px;
+  padding: 5px;
+  font-size: 16px;
+  width: 5vw;
+  height: 5vh;
+  color: deepskyblue;
+  background-color: black;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  z-index: auto;
+}
+.fixed button:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+  transition: background-color 0.4s ease-in-out;
+}
+
+/* Section ratings: Slider Based on Ratings */
+/* rating slider */
+
+#rating {
+  padding: 8px;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+#special {
+  padding: 8px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.boxes {
+  position: relative;
+  overflow: hidden;
+  height: 47vh;
+  padding: 22px;
+  /* border: 1px solid black; */
+  perspective: 1200px; /* To give the 3D look, inversely proportional */
+}
+
+/* Properties of All Cards */
+
+#rating .boxes .box,
+#special .boxes .char {
+  margin: 0 38.7px;
+  /* border: 1px solid black; */
+  height: 84%;
+  width: 30%;
+  padding: 4px 7px;
+  opacity: 0;
+  transform-style: preserve-3d;
+  transition: left 1.4s ease-in-out, transform 1s ease-in-out;
+  /* transition-property: left, transform;
+  transition-duration: 1.4s, 1s;
+  transition-timing-function: ease-in-out; */
+  /* transition: left 1.5s ease-in-out; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.26), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+  margin-top: 27px;
+  margin-bottom: 60px;
+}
+#rating .boxes .box:hover,
+#special .boxes .char:hover {
+  transform: rotateY(-180deg);
+}
+
+/* Properties of visible three cards */
+
+#rating .boxes .box.box1,
+#special .boxes .char.box1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition-property: left, transform, opacity;
+  transition-duration: 1.4s, 1s, 1.2s;
+  transition-timing-function: ease-in-out;
+}
+#rating .boxes .box.box2,
+#special .boxes .char.box2 {
+  position: absolute;
+  top: 0;
+  left: 32%;
+  opacity: 1;
+  transition-property: left, transform, opacity;
+  transition-duration: 1.4s, 1s, 1.2s;
+  transition-timing-function: ease-in-out;
+}
+#rating .boxes .box.box3,
+#special .boxes .char.box3 {
+  position: absolute;
+  top: 0;
+  left: 64%;
+  opacity: 1;
+  transition-property: left, transform, opacity;
+  transition-duration: 1.4s, 1s, 1.2s;
+  transition-timing-function: ease-in-out;
+}
+
+/* Flipping Content */
+
+.boxes .front,
+.boxes .back {
+  -webkit-backface-visibility: hidden; /*safari*/
+  backface-visibility: hidden;
+}
+.boxes .front {
+  text-align: center;
+  position: absolute;
+  font-size: 1.3em;
+  top: 56%;
+  left: 40%;
+  translate: transform(-50%, -50%);
+  color: whitesmoke;
+  opacity: 0;
+}
+
+.boxes .char .front {
+  color: black;
+  font-weight: bolder;
+}
+
+#rating .boxes .box.box1 .front,
+#rating .boxes .box.box2 .front,
+#rating .boxes .box.box3 .front,
+#special .boxes .char.box1 .front,
+#special .boxes .char.box2 .front,
+#special .boxes .char.box3 .front {
+  opacity: 1;
+  transition: all 0.4s ease-in-out 0.4s;
+}
+.boxes .back {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: deepskyblue;
+  background-color: #333333;
+  transform: rotateY(-180deg);
+}
+.boxes .back h3 {
+  margin-top: 10px;
+  font-size: 1em;
+  text-align: center;
+}
+.boxes .back .info {
+  margin-top: 45px;
+  margin-bottom: 20px;
+  padding: 3px;
+}
+.boxes .back p {
+  margin: 45px 10px;
+  text-align: center;
+  font-size: 1em;
+}
+
+/* See Doctors Button */
+
+.boxes .back button {
+  text-align: center;
+  border: 1px solid deepskyblue;
+  background-color: #333;
+  font: 16px "Ubuntu", sans-serif;
+  color: deepskyblue;
+  padding: 10px;
+  margin-left: 120px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+.boxes .back button:hover {
+  background-color: deepskyblue;
+  cursor: pointer;
+  color: black;
+  transition: all 0.5s ease-in-out;
+}
+
+/* The See More Button */
+
+.link {
+  text-align: end;
+  visibility: hidden;
+}
+.link button {
+  border: none;
+  background-color: deepskyblue;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  outline: none;
+  font-weight: bold;
+  border: 1px solid black;
+  /* color: whitesmoke; */
+  /* background-color: black; */
+  padding: 3px 8px;
+}
+.link button:hover {
+  background-color: black;
+  color: deepskyblue;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
+}
+
+/* The Right and Left Button */
+
+.button button {
+  border: 2px solid black;
+  border-radius: 50%;
+  outline: none;
+  background-color: deepskyblue;
+  transition: all 0.4s ease-in-out;
+}
+.button .left {
+  position: absolute;
+  top: 50%;
+  left: 14vh;
+}
+.button .right {
+  position: absolute;
+  top: 50%;
+  right: 13vh;
+}
+.button button:hover {
+  cursor: pointer;
+  color: deepskyblue;
+  background-color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Based On Rating - division */
+
+.division1 {
+  margin-bottom: 0px;
+}
+.division1 h1 {
+  font-size: 2rem;
+}
+.division1 p {
+  font-size: 18px;
+}
+
+/* Background Images For Rating Slider */
+
+#rating .boxes .box:first-child {
+  background: url(../img/apollo.jpg) no-repeat center center/cover;
+  background-color: #333;
+}
+#rating .boxes .box:nth-child(2) {
+  background: url(../img/kmh.jpg) no-repeat center center/cover;
+  background-color: #333;
+}
+#rating .boxes .box:nth-child(3) {
+  background: url(../img/mehta.jpg) no-repeat center center/cover;
+  background-color: #333;
+}
+#rating .boxes .box:nth-child(4) {
+  background: url(../img/fortis.jpg) no-repeat center center/cover;
+  background-color: #333;
+}
+#rating .boxes .box:nth-child(5) {
+  background: url(../img/frontier.jpg) no-repeat center center/cover;
+  background-color: #333;
+}
+#rating .boxes .box:nth-child(6) {
+  background: url(../img/hcg.jpg) no-repeat center center/cover;
+  background-color: #333;
+}
+
+/* Background Images For Specialty Slider */
+
+#special .boxes .char:first-child {
+  background: url(../img/general.jpg) no-repeat center center/cover;
+  background-color: #333;
+}
+#special .boxes .char:nth-child(2) {
+  background: url(../img/pediatrician.jpg) no-repeat center center/cover;
+  background-color: #333;
+}
+#special .boxes .char:nth-child(3) {
+  background: url(../img/ent.jpg) no-repeat center center/cover;
+  background-color: #333;
+}
+#special .boxes .char:nth-child(4) {
+  background: url(../img/dentist.jpg) no-repeat center center/cover;
+  background-color: #333;
+}
+#special .boxes .char:nth-child(5) {
+  background: url(../img/eye.jpg) no-repeat center center/cover;
+  background-color: #333;
+}
+#special .boxes .char:nth-child(6) {
+  background: url(../img/cardio.jpg) no-repeat center center/cover;
+  background-color: #333;
+}
+
+/* Footer */
+
+/* Copyrights */
+
+footer {
+  position: relative;
+  background-color: #333;
+  height: 37vh;
+  width: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+}
+footer #group {
+  display: flex;
+}
+footer #group div {
+  /* border: 1px whitesmoke solid; */
+  padding: 20px 0px 10px 20px;
+  color: whitesmoke;
+}
+footer h1 {
+  color: whitesmoke;
+}
+footer p,
+footer ul {
+  font-size: 1.2rem;
+}
+footer #group #aboutus {
+  flex: 3;
+}
+footer #group #contact {
+  flex: 2;
+}
+footer .copy .text {
+  color: deepskyblue;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 20px;
+}
+footer .copy a {
+  display: inline;
+  position: absolute;
+  color: deepskyblue;
+  /* background-color: black; */
+  border: 2px solid deepskyblue;
+  right: 3em;
+  bottom: 6em;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+footer .copy a:hover {
+  background-color: deepskyblue;
+  color: black;
+  transition: all 0.5s ease-in-out;
+  /* border-color: black; */
+}
+
+/* SEE MORE WEBPAGE */
+
+#hospital .row,
+#doctor .row {
+  position: relative;
+  background-color: #333;
+  height: 17vh;
+  width: auto;
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.2);
+  margin: 15px 20px;
+  border-radius: 6px;
+}
+#hospital .row div,
+#doctor .row div {
+  padding: 20px 0px 10px 20px;
+  color: deepskyblue;
+}
+#hospital .row .no,
+#doctor .row .no {
+  flex: 1;
+  border-right: 1px solid deepskyblue;
+}
+#hospital .row .no h2,
+#doctor .row .no h2 {
+  position: absolute;
+  left: 33px;
+  top: 40px;
+}
+#hospital .row .name,
+#doctor .row .name {
+  flex: 5;
+  /* border-right: 1px solid deepskyblue; */
+}
+#hospital .row .name h2,
+#doctor .row .name h2 {
+  position: absolute;
+  left: 110px;
+  top: 40px;
+}
+#hospital .row .detail,
+#doctor .row .detail {
+  flex: 9;
+  padding: 10px 35px;
+  /* border: 1px solid white; */
+  /* border-right: 1px solid whitesmoke; */
+}
+#hospital .row .detail p,
+#doctor .row .detail p {
+  font-size: 1.1em;
+  padding-right: 8vw;
+  /* border: 1px solid white; */
+}
+/* See Doctors Button */
+
+#hospital .row .detail button,
+#doctor .row .detail button {
+  position: absolute;
+  right: 30px;
+  top: 40px;
+  border: 1px solid deepskyblue;
+  background-color: #333;
+  font: 16px "Ubuntu", sans-serif;
+  color: deepskyblue;
+  padding: 10px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+#hospital .row .detail button:hover,
+#doctor .row .detail button:hover {
+  background-color: deepskyblue;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+.wrapper .treat h3 {
+  font-weight: bold;
+  margin: 20px;
+  color: aliceblue;
+}
+
+/* SEARCH WEBPAGE */
+#tabs {
+  position: relative;
+  /* border: 1px solid #333333; */
+  height: 4vh;
+  width: auto;
+  display: flex;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.2); */
+  margin: 15px 20px;
+  border-radius: 6px;
+}
+#tabs .element {
+  flex: 1;
+  text-align: center;
+  /* border-right: 1px solid #333333; */
+}
+#tabs .element button {
+  border: 2px solid #333;
+  background-color: deepskyblue;
+  font: 16px "Ubuntu", sans-serif;
+  color: #333;
+  padding: 10px;
+  font-weight: bold;
+  outline: none;
+}
+#tabs .element button:hover {
+  background-color: #333333;
+  cursor: pointer;
+  color: deepskyblue;
+  font-weight: bold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in-out;
+}
+#tabs .element .active {
+  background-color: #333333;
+  color: deepskyblue;
+  font-weight: bold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
